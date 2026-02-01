@@ -1,87 +1,77 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Github, Linkedin, Mail, Phone, Heart } from "lucide-react"
 import { portfolioContent } from "@/lib/content"
+import Link from "next/link"
 
 export function Footer() {
   const { hero, ui } = portfolioContent
+  const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-24 px-4 bg-muted/30 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-xl rotate-12 animate-float" />
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-secondary/10 rounded-xl -rotate-12 animate-float" style={{ animationDelay: "1s" }} />
-      </div>
-
-      <div className="max-w-4xl mx-auto text-center">
-        <Card className="p-12 md:p-16 rounded-2xl shadow-brutal border-2 border-foreground bg-card">
-          {/* Header */}
-          <div className="mb-10">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary font-semibold rounded-lg text-sm mb-4">
-              {ui.footer.title}
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight text-balance">
-              {ui.footer.cta}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto text-pretty">
-              {ui.footer.description}
+    <footer className="bg-zinc-50 dark:bg-black text-zinc-900 dark:text-zinc-50 pt-20 pb-10 overflow-hidden relative transition-colors duration-300">
+      <div className="container mx-auto px-4 z-10 relative">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24 mb-32">
+          {/* Brand & Copyright */}
+          <div className="flex flex-col justify-between h-full">
+            <div className="flex items-center gap-2 mb-8">
+              <div className="w-8 h-8 bg-black text-white dark:bg-white dark:text-black rounded-lg flex items-center justify-center font-bold text-xl font-mono transition-colors">
+                A
+              </div>
+              <span className="text-xl font-bold tracking-tight">Akib Hasan</span>
+            </div>
+            <p className="text-zinc-500 dark:text-zinc-500 text-sm hidden lg:block">
+              © copyright Akib Hasan {currentYear}. All rights reserved.
             </p>
           </div>
 
-          {/* CTA Button */}
-          <Button
-            asChild
-            size="lg"
-            className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 font-bold text-lg shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl mb-10"
-          >
-            <a 
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Mail className="w-5 h-5 mr-3" />
-              {ui.buttons.startConversation}
-            </a>
-          </Button>
+          {/* Links Columns */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 flex-1">
+            {/* Pages */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-semibold text-lg mb-2">Pages</h3>
+              <Link href="/" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Home</Link>
+              <Link href="#about" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">About</Link>
+              <Link href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Projects</Link>
+              <Link href="#experience" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Experience</Link>
+            </div>
 
-          {/* Social Links */}
-          <div className="flex gap-4 justify-center mb-10">
-            <a
-              href={hero.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-background rounded-xl border-2 border-border hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-brutal-sm group"
-            >
-              <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-            </a>
-            <a
-              href={hero.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-background rounded-xl border-2 border-border hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-brutal-sm group"
-            >
-              <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-            </a>
-            <a
-              href={`tel:${hero.phone}`}
-              className="p-4 bg-background rounded-xl border-2 border-border hover:border-primary transition-all duration-200 hover:-translate-y-1 hover:shadow-brutal-sm group"
-              aria-label="Phone Number"
-            >
-              <Phone className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-            </a>
+            {/* Socials */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-semibold text-lg mb-2">Socials</h3>
+              <a href={hero.linkedin} target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">LinkedIn</a>
+              <a href={hero.github} target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">GitHub</a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`} target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Email</a>
+            </div>
+
+            {/* Legal */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-semibold text-lg mb-2">Legal</h3>
+              <span className="text-zinc-600 dark:text-zinc-400 cursor-not-allowed">Privacy Policy</span>
+              <span className="text-zinc-600 dark:text-zinc-400 cursor-not-allowed">Terms of Service</span>
+              <span className="text-zinc-600 dark:text-zinc-400 cursor-not-allowed">Cookie Policy</span>
+            </div>
+
+            {/* Contact */}
+            <div className="flex flex-col gap-4">
+              <h3 className="font-semibold text-lg mb-2">Contact</h3>
+              <a href={`tel:${hero.phone}`} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Call Me</a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`} target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Send Email</a>
+            </div>
           </div>
-        </Card>
 
-        {/* Copyright */}
-        <div className="mt-10">
-          <p className="text-muted-foreground font-medium flex items-center justify-center gap-2">
-            {ui.footer.copyright}
-            <Heart className="w-4 h-4 text-secondary fill-secondary" />
+          {/* Mobile Copyright */}
+          <p className="text-zinc-500 dark:text-zinc-500 text-sm lg:hidden mt-8">
+            © copyright Akib Hasan {currentYear}. All rights reserved.
           </p>
         </div>
+      </div>
+
+      {/* Big Text Background */}
+      <div className="w-full overflow-hidden flex justify-center items-end opacity-5 dark:opacity-10 select-none pointer-events-none">
+        <h1 className="text-[15vw] leading-[0.8] font-bold tracking-tighter text-black dark:text-white whitespace-nowrap transition-colors">
+          Akib Hasan
+        </h1>
       </div>
     </footer>
   )

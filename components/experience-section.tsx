@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { portfolioContent } from "@/lib/content"
 import { Building2, Calendar, MapPin, CheckCircle2, Briefcase } from "lucide-react"
+import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export function ExperienceSection() {
   const { experience } = portfolioContent
@@ -27,18 +28,10 @@ export function ExperienceSection() {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
-
-          <div className="space-y-8">
+        <TracingBeam className="px-6 max-w-5xl">
+          <div className="space-y-12 pl-4">
             {experience.list.map((exp, index) => (
-              <div key={index} className="relative pl-16 md:pl-20">
-                {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-6 w-4 h-4 bg-primary rounded-full border-4 border-background shadow-brutal-sm z-10">
-                  <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
-                </div>
-
+              <div key={index} className="relative">
                 <Card className="p-6 md:p-8 rounded-2xl border-2 border-border bg-card hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal group">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
@@ -110,7 +103,7 @@ export function ExperienceSection() {
               </div>
             ))}
           </div>
-        </div>
+        </TracingBeam>
       </div>
     </section>
   )
