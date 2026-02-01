@@ -59,52 +59,52 @@ export function HeroSection() {
 
       {/* Floating Tech Icons Background */}
       <div className="absolute inset-0 -z-5 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary">
+        <div className="absolute top-10 left-10 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary">
           <SiTypescript className="w-8 h-8" />
         </div>
-        <div className="absolute top-40 right-20 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1s" }}>
+        <div className="absolute top-20 right-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1s" }}>
           <SiReact className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-40 left-1/4 w-20 h-20 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2s" }}>
+        <div className="absolute bottom-20 left-10 w-20 h-20 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2s" }}>
           <SiNextdotjs className="w-10 h-10" />
         </div>
-        <div className="absolute bottom-20 right-1/4 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute bottom-10 right-10 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "1.5s" }}>
           <SiJavascript className="w-6 h-6" />
         </div>
-        <div className="absolute top-1/3 left-20 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-1/2 left-4 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "0.5s" }}>
           <SiTailwindcss className="w-8 h-8" />
         </div>
-        <div className="absolute top-1/2 right-32 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2.5s" }}>
+        <div className="absolute top-1/2 right-4 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2.5s" }}>
           <SiAngular className="w-8 h-8" />
         </div>
-        <div className="absolute top-10 right-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3s" }}>
+        <div className="absolute top-32 right-[15%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3s" }}>
           <SiRedux className="w-6 h-6" />
         </div>
-        <div className="absolute bottom-10 left-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.2s" }}>
+        <div className="absolute bottom-32 left-[15%] w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.2s" }}>
           <SiGraphql className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-32 right-10 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.8s" }}>
+        <div className="absolute bottom-[20%] right-[5%] w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.8s" }}>
           <SiNodedotjs className="w-8 h-8" />
         </div>
-        <div className="absolute top-32 left-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
+        <div className="absolute top-[20%] left-[5%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
           <SiDocker className="w-6 h-6" />
         </div>
-        <div className="absolute bottom-1/4 left-1/2 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "3.5s" }}>
+        <div className="absolute bottom-5 left-1/3 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "3.5s" }}>
           <SiHtml5 className="w-5 h-5" />
         </div>
-        <div className="absolute top-20 right-1/4 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.8s" }}>
+        <div className="absolute top-5 right-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.8s" }}>
           <SiCss3 className="w-6 h-6" />
         </div>
-        <div className="absolute top-1/2 left-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.8s" }}>
+        <div className="absolute top-[40%] left-[10%] w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.8s" }}>
           <SiGit className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-20 left-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.3s" }}>
+        <div className="absolute bottom-[40%] right-[10%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.3s" }}>
           <SiMongodb className="w-6 h-6" />
         </div>
-        <div className="absolute top-1/4 right-10 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute top-[15%] right-[20%] w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.5s" }}>
           <SiPython className="w-5 h-5" />
         </div>
-        <div className="absolute bottom-1/2 right-20 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3.2s" }}>
+        <div className="absolute bottom-[15%] left-[20%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3.2s" }}>
           <SiSass className="w-6 h-6" />
         </div>
       </div>
