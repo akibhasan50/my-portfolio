@@ -12,13 +12,6 @@ export function HeroSection() {
   const { theme, toggleTheme } = useThemeContext()
   const isDark = theme === "dark"
 
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById("projects")
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about")
     if (aboutSection) {
@@ -52,7 +45,7 @@ export function HeroSection() {
           variant="outline"
           size="icon"
           onClick={toggleTheme}
-          className="rounded-xl border-2 border-foreground bg-card shadow-brutal-sm hover:shadow-brutal transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1"
+          className="rounded-xl border-2 border-foreground bg-card text-foreground shadow-brutal-sm hover:shadow-brutal transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:hover:text-white"
           aria-label="Toggle theme"
         >
           {isDark ? (
@@ -169,15 +162,6 @@ export function HeroSection() {
                   <Download className="w-5 h-5 mr-2" />
                   Download Resume
                 </a>
-              </Button>
-
-              <Button
-                onClick={scrollToProjects}
-                variant="outline"
-                size="lg"
-                className="rounded-xl border-2 border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-6 font-bold transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 bg-card shadow-brutal hover:shadow-xl"
-              >
-                {portfolioContent.ui.buttons.viewProjects}
               </Button>
             </div>
 
