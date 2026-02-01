@@ -153,7 +153,7 @@ export const portfolioContent = {
         description:
           "A web-based Bangla text annotation tool using React, featuring client-side caching, session management, and role-based access control. Streamlined the annotation and categorization of Bangla text.",
         image: "",
-        tech: ["React", "JavaScript", "CSS", "Session Management"],
+        tech: ["React", "Shadcn", "TypeScript", "Session Management"],
         github: "",
         live: "",
         featured: true,
@@ -164,7 +164,7 @@ export const portfolioContent = {
         description:
           "An e-learning platform facilitating cost-effective online training for data entry operators. Replaced 90% of physical training and reduced costs by 60%.",
         image: "",
-        tech: ["React", "Node.js", "Full-stack"],
+        tech: ["React", "Node.js", "JavaScript", "PHP", "MySQL"],
         github: "",
         live: "",
         featured: true,

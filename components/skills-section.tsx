@@ -93,18 +93,7 @@ export function SkillsSection() {
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-          {skills.stats.map((stat, index) => (
-            <Card
-              key={index}
-              className="p-6 text-center border-2 border-border bg-card hover:border-primary transition-all duration-300 hover:-translate-y-1 rounded-xl"
-            >
-              <div className="text-sm font-bold text-primary mb-2">{stat.title}</div>
-              <div className="text-xs text-muted-foreground">{stat.description}</div>
-            </Card>
-          ))}
-        </div>
+
       </div>
     </section>
   )

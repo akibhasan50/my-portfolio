@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Github, Linkedin, Mail, MapPin, Moon, Sun, ChevronDown, Phone, Download } from "lucide-react"
-import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAngular, SiJest, SiNodedotjs, SiDocker, SiJavascript, SiRedux, SiGraphql } from "react-icons/si"
+import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAngular, SiJest, SiNodedotjs, SiDocker, SiJavascript, SiRedux, SiGraphql, SiHtml5, SiCss3, SiGit, SiMongodb, SiPython, SiSass } from "react-icons/si"
 import { portfolioContent } from "@/lib/content"
 import { useThemeContext } from "@/components/theme-context"
 
@@ -96,6 +96,24 @@ export function HeroSection() {
         <div className="absolute top-32 left-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
           <SiDocker className="w-6 h-6" />
         </div>
+        <div className="absolute bottom-1/4 left-1/2 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "3.5s" }}>
+          <SiHtml5 className="w-5 h-5" />
+        </div>
+        <div className="absolute top-20 right-1/4 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.8s" }}>
+          <SiCss3 className="w-6 h-6" />
+        </div>
+        <div className="absolute top-1/2 left-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.8s" }}>
+          <SiGit className="w-8 h-8" />
+        </div>
+        <div className="absolute bottom-20 left-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.3s" }}>
+          <SiMongodb className="w-6 h-6" />
+        </div>
+        <div className="absolute top-1/4 right-10 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.5s" }}>
+          <SiPython className="w-5 h-5" />
+        </div>
+        <div className="absolute bottom-1/2 right-20 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3.2s" }}>
+          <SiSass className="w-6 h-6" />
+        </div>
       </div>
 
       <Card className="max-w-5xl w-full p-8 md:p-16 rounded-2xl shadow-brutal border-2 border-foreground bg-card relative overflow-hidden">
@@ -132,7 +150,11 @@ export function HeroSection() {
                 size="lg"
                 className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 font-bold shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl"
               >
-                <a href={`mailto:${hero.email}`}>
+                <a 
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Mail className="w-5 h-5 mr-2" />
                   {portfolioContent.ui.buttons.getInTouch}
                 </a>

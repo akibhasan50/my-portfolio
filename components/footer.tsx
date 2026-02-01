@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Github, Linkedin, Mail, Phone, Heart, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, Heart } from "lucide-react"
 import { portfolioContent } from "@/lib/content"
 
 export function Footer() {
@@ -37,7 +37,11 @@ export function Footer() {
             size="lg"
             className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 font-bold text-lg shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl mb-10"
           >
-            <a href={`mailto:${hero.email}`}>
+            <a 
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Mail className="w-5 h-5 mr-3" />
               {ui.buttons.startConversation}
             </a>
@@ -68,16 +72,6 @@ export function Footer() {
             >
               <Phone className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
             </a>
-          </div>
-
-          {/* Stats */}
-          <div className="flex justify-center gap-8 mb-8">
-            {ui.footer.stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </Card>
 

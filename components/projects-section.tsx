@@ -71,7 +71,7 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 items-center min-h-[36px]">
                   {project.live && (
                     <Button
                       size="sm"
@@ -98,7 +98,7 @@ export function ProjectsSection() {
                     </Button>
                   )}
                   {!project.live && !project.github && (
-                    <span className="text-sm text-muted-foreground italic">Enterprise project</span>
+                    <span className="text-sm text-muted-foreground italic pl-1">Enterprise project</span>
                   )}
                 </div>
               </div>
