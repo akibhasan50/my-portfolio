@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Github, Linkedin, Mail, MapPin, Moon, Sun, ChevronDown, Phone, Download } from "lucide-react"
-import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAngular, SiJest, SiNodedotjs, SiDocker, SiJavascript } from "react-icons/si"
+import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAngular, SiJest, SiNodedotjs, SiDocker, SiJavascript, SiRedux, SiGraphql } from "react-icons/si"
 import { portfolioContent } from "@/lib/content"
 import { useThemeContext } from "@/components/theme-context"
 
@@ -25,6 +25,17 @@ export function HeroSection() {
       aboutSection.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  const techStack = [
+    { name: "React", icon: SiReact, color: "#61DAFB" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+    { name: "Next.js", icon: SiNextdotjs, color: isDark ? "#FFFFFF" : "#000000" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Angular", icon: SiAngular, color: "#DD0031" },
+    { name: "Jest", icon: SiJest, color: "#C21325" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+    { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  ]
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative overflow-hidden">
@@ -73,6 +84,18 @@ export function HeroSection() {
         <div className="absolute top-1/2 right-32 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2.5s" }}>
           <SiAngular className="w-8 h-8" />
         </div>
+        <div className="absolute top-10 right-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3s" }}>
+          <SiRedux className="w-6 h-6" />
+        </div>
+        <div className="absolute bottom-10 left-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.2s" }}>
+          <SiGraphql className="w-8 h-8" />
+        </div>
+        <div className="absolute bottom-32 right-10 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.8s" }}>
+          <SiNodedotjs className="w-8 h-8" />
+        </div>
+        <div className="absolute top-32 left-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
+          <SiDocker className="w-6 h-6" />
+        </div>
       </div>
 
       <Card className="max-w-5xl w-full p-8 md:p-16 rounded-2xl shadow-brutal border-2 border-foreground bg-card relative overflow-hidden">
@@ -120,7 +143,7 @@ export function HeroSection() {
                 size="lg"
                 className="rounded-xl bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 font-bold shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl"
               >
-                <a href="/Akib_Hasan_Resume.pdf" download="Akib_Hasan_Resume.pdf">
+                <a href="/Akib_Hasan_resume_frontend.pdf" download="Akib_Hasan_resume_frontend.pdf">
                   <Download className="w-5 h-5 mr-2" />
                   Download Resume
                 </a>
@@ -169,22 +192,13 @@ export function HeroSection() {
             <div className="w-full max-w-3xl">
               <p className="text-sm font-semibold text-muted-foreground mb-4 text-center">CORE TECH STACK</p>
               <div className="flex flex-wrap justify-center gap-3">
-                {[
-                  { name: "React", icon: SiReact, color: "primary" },
-                  { name: "TypeScript", icon: SiTypescript, color: "secondary" },
-                  { name: "Next.js", icon: SiNextdotjs, color: "accent" },
-                  { name: "Tailwind", icon: SiTailwindcss, color: "primary" },
-                  { name: "Angular", icon: SiAngular, color: "secondary" },
-                  { name: "Jest", icon: SiJest, color: "accent" },
-                  { name: "Node.js", icon: SiNodedotjs, color: "primary" },
-                  { name: "Docker", icon: SiDocker, color: "secondary" },
-                ].map((tech) => (
+                {techStack.map((tech) => (
                   <div
                     key={tech.name}
                     className="group relative px-4 py-2 bg-muted/50 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:-translate-y-1"
                   >
                     <div className="flex items-center gap-2">
-                      <span className={`font-mono font-bold text-${tech.color}`}>
+                      <span className="font-mono font-bold" style={{ color: tech.color }}>
                         <tech.icon className="w-5 h-5" />
                       </span>
                       <span className="text-sm font-medium text-foreground">{tech.name}</span>

@@ -75,7 +75,10 @@ export function SkillsSection() {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border-2 border-primary/20 flex items-center justify-center group-hover:border-primary transition-colors">
-                    <skill.icon className="w-6 h-6 text-primary" />
+                    <skill.icon 
+                      className={`w-6 h-6 ${skill.color ? '' : 'text-primary'}`} 
+                      style={{ color: skill.color }} 
+                    />
                   </div>
                   <h3 className="font-bold text-foreground group-hover:text-primary transition-colors">
                     {skill.name}
