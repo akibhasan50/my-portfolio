@@ -188,6 +188,7 @@ export const portfolioContent = {
     list: [
       {
         company: "UJET.cx",
+        logo: "/logos/ujet.png",
         position: "Software Engineer (Front-End)",
         duration: "Jun 2024 - Present",
         location: "San Francisco, CA (Remote)",
@@ -204,6 +205,7 @@ export const portfolioContent = {
       },
       {
         company: "GigaTech Ltd.",
+        logo: "/logos/gigatech.png",
         position: "Front End Developer",
         duration: "Apr 2022 - May 2024",
         location: "Dhaka, Bangladesh",
@@ -219,6 +221,7 @@ export const portfolioContent = {
       },
       {
         company: "Golden Harvest Infotech Ltd.",
+        logo: "/logos/ghit.png",
         position: "Assistant Programmer",
         duration: "Dec 2020 - Mar 2022",
         location: "Dhaka, Bangladesh",

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { portfolioContent } from "@/lib/content"
 import { Building2, Calendar, MapPin, CheckCircle2, Briefcase } from "lucide-react"
 import { TracingBeam } from "@/components/ui/tracing-beam"
+import Image from "next/image"
 
 export function ExperienceSection() {
   const { experience } = portfolioContent
@@ -34,31 +35,54 @@ export function ExperienceSection() {
               <div key={index} className="relative">
                 <Card className="p-6 md:p-8 rounded-2xl border-2 border-border bg-card hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal group">
                   {/* Header */}
-                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
-                    <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
-                        {exp.position}
-                      </h3>
-                      <div className="flex items-center gap-2 text-primary font-semibold">
-                        <Building2 className="w-4 h-4" />
-                        <span>{exp.company}</span>
-                      </div>
-                      {exp.companyDescription && (
-                        <p className="text-sm text-muted-foreground mt-1 max-w-md">
-                          {exp.companyDescription}
-                        </p>
+                  <div className="flex flex-col md:flex-row gap-6 mb-6">
+                    {/* Logo Column */}
+                    <div className="shrink-0">
+                      {exp.logo ? (
+                        <div className="w-16 h-16 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-border/50 flex items-center justify-center p-2">
+                          <img
+                            src={exp.logo}
+                            alt={exp.company}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Building2 className="w-8 h-8 text-primary" />
+                        </div>
                       )}
                     </div>
-                    <div className="flex flex-col items-start md:items-end gap-2">
-                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-bold rounded-xl shadow-brutal-sm border-2 border-foreground">
-                        <Calendar className="w-4 h-4" />
-                        {exp.duration}
-                      </span>
-                      {exp.location && (
-                        <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                          <MapPin className="w-4 h-4" />
-                          {exp.location}
-                        </span>
+
+                    {/* Content Column */}
+                    <div className="flex-1">
+                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
+                        <div>
+                          <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-1">
+                            {exp.position}
+                          </h3>
+                          <div className="text-lg font-semibold text-primary flex items-center gap-2">
+                            {exp.company}
+                          </div>
+                        </div>
+
+                        <div className="flex flex-col items-start md:items-end gap-2 mt-2 md:mt-0">
+                          <span className="inline-flex items-center gap-2 px-3 py-1 bg-secondary/50 text-secondary-foreground text-sm font-medium rounded-lg border border-border/50">
+                            <Calendar className="w-3.5 h-3.5" />
+                            {exp.duration}
+                          </span>
+                          {exp.location && (
+                            <span className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
+                              <MapPin className="w-3.5 h-3.5" />
+                              {exp.location}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {exp.companyDescription && (
+                        <p className="text-sm text-muted-foreground leading-relaxed border-l-2 border-primary/20 pl-4 py-1">
+                          {exp.companyDescription}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -77,7 +101,7 @@ export function ExperienceSection() {
                       <ul className="space-y-2">
                         {exp.highlights.map((highlight, hIndex) => (
                           <li key={hIndex} className="flex items-start gap-3 text-muted-foreground">
-                            <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             <span className="text-sm leading-relaxed">{highlight}</span>
                           </li>
                         ))}
