@@ -59,89 +59,90 @@ export function HeroSection() {
 
       {/* Floating Tech Icons Background */}
       <div className="absolute inset-0 -z-5 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary">
+        <div className="absolute top-10 left-10 w-16 h-16 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary">
           <SiTypescript className="w-8 h-8" />
         </div>
-        <div className="absolute top-20 right-10 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1s" }}>
+        <div className="absolute top-20 right-10 w-14 h-14 rounded-2xl bg-secondary/5 backdrop-blur-sm border border-secondary/10 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1s" }}>
           <SiReact className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-20 left-10 w-20 h-20 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2s" }}>
+        <div className="absolute bottom-20 left-10 w-20 h-20 rounded-2xl bg-accent/5 backdrop-blur-sm border border-accent/10 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2s" }}>
           <SiNextdotjs className="w-10 h-10" />
         </div>
-        <div className="absolute bottom-10 right-10 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute bottom-10 right-10 w-12 h-12 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "1.5s" }}>
           <SiJavascript className="w-6 h-6" />
         </div>
-        <div className="absolute top-1/2 left-4 w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-1/2 left-4 w-14 h-14 rounded-2xl bg-secondary/5 backdrop-blur-sm border border-secondary/10 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "0.5s" }}>
           <SiTailwindcss className="w-8 h-8" />
         </div>
-        <div className="absolute top-1/2 right-4 w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2.5s" }}>
+        <div className="absolute top-1/2 right-4 w-16 h-16 rounded-2xl bg-accent/5 backdrop-blur-sm border border-accent/10 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "2.5s" }}>
           <SiAngular className="w-8 h-8" />
         </div>
-        <div className="absolute top-32 right-[15%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3s" }}>
+        <div className="absolute top-32 right-[15%] w-12 h-12 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3s" }}>
           <SiRedux className="w-6 h-6" />
         </div>
-        <div className="absolute bottom-32 left-[15%] w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.2s" }}>
+        <div className="absolute bottom-32 left-[15%] w-14 h-14 rounded-2xl bg-secondary/5 backdrop-blur-sm border border-secondary/10 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.2s" }}>
           <SiGraphql className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-[20%] right-[5%] w-16 h-16 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.8s" }}>
+        <div className="absolute bottom-[20%] right-[5%] w-16 h-16 rounded-2xl bg-accent/5 backdrop-blur-sm border border-accent/10 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.8s" }}>
           <SiNodedotjs className="w-8 h-8" />
         </div>
-        <div className="absolute top-[20%] left-[5%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
+        <div className="absolute top-[20%] left-[5%] w-12 h-12 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.2s" }}>
           <SiDocker className="w-6 h-6" />
         </div>
-        <div className="absolute bottom-5 left-1/3 w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "3.5s" }}>
+        <div className="absolute bottom-5 left-1/3 w-10 h-10 rounded-2xl bg-accent/5 backdrop-blur-sm border border-accent/10 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "3.5s" }}>
           <SiHtml5 className="w-5 h-5" />
         </div>
-        <div className="absolute top-5 right-1/3 w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.8s" }}>
+        <div className="absolute top-5 right-1/3 w-12 h-12 rounded-2xl bg-secondary/5 backdrop-blur-sm border border-secondary/10 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.8s" }}>
           <SiCss3 className="w-6 h-6" />
         </div>
-        <div className="absolute top-[40%] left-[10%] w-14 h-14 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.8s" }}>
+        <div className="absolute top-[40%] left-[10%] w-14 h-14 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "2.8s" }}>
           <SiGit className="w-8 h-8" />
         </div>
-        <div className="absolute bottom-[40%] right-[10%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.3s" }}>
+        <div className="absolute bottom-[40%] right-[10%] w-12 h-12 rounded-2xl bg-accent/5 backdrop-blur-sm border border-accent/10 flex items-center justify-center animate-float font-mono font-bold text-accent" style={{ animationDelay: "0.3s" }}>
           <SiMongodb className="w-6 h-6" />
         </div>
-        <div className="absolute top-[15%] right-[20%] w-10 h-10 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-secondary/30 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute top-[15%] right-[20%] w-10 h-10 rounded-2xl bg-secondary/5 backdrop-blur-sm border border-secondary/10 flex items-center justify-center animate-float font-mono font-bold text-secondary" style={{ animationDelay: "1.5s" }}>
           <SiPython className="w-5 h-5" />
         </div>
-        <div className="absolute bottom-[15%] left-[20%] w-12 h-12 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-primary/30 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3.2s" }}>
+        <div className="absolute bottom-[15%] left-[20%] w-12 h-12 rounded-2xl bg-primary/5 backdrop-blur-sm border border-primary/10 flex items-center justify-center animate-float font-mono font-bold text-primary" style={{ animationDelay: "3.2s" }}>
           <SiSass className="w-6 h-6" />
         </div>
       </div>
 
-      <Card className="max-w-5xl w-full p-8 md:p-16 rounded-2xl shadow-brutal border-2 border-foreground bg-card relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-24 h-24 bg-primary rounded-bl-3xl" />
-        <div className="absolute bottom-0 left-0 w-20 h-20 bg-secondary rounded-tr-3xl" />
-
-        <div className="relative z-10">
-          <div className="flex flex-col items-center text-center">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left Column: Content */}
+          <div className="flex flex-col items-start text-left space-y-8 animate-fade-in-up">
             {/* Location Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-muted rounded-xl text-muted-foreground font-medium mb-6 border-2 border-foreground shadow-brutal-sm">
-              <MapPin className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-background/80 backdrop-blur-md rounded-full border border-border shadow-sm text-sm font-medium text-muted-foreground">
+              <MapPin className="w-4 h-4 mr-2 text-primary" />
               {hero.location}
             </div>
 
-            {/* Title */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 tracking-tight text-balance">
-              {hero.name}
-            </h1>
-
-            {/* Subtitle */}
-            <h2 className="text-xl md:text-2xl font-semibold mb-6 text-primary">
-              {hero.title}
-            </h2>
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-foreground leading-[0.9]">
+                AKIB <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  HASAN
+                </span>
+              </h1>
+              <p className="text-2xl md:text-3xl font-bold text-muted-foreground/80">
+                {hero.title}
+              </p>
+            </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl text-pretty">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl text-pretty border-l-4 border-primary/30 pl-6">
               {hero.description}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 justify-center mb-10">
+            <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 asChild
                 size="lg"
-                className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 font-bold shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl"
+                className="h-14 px-8 rounded-full bg-foreground text-background hover:bg-foreground/90 font-bold shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <a 
                   href={`https://mail.google.com/mail/?view=cm&fs=1&to=${hero.email}`}
@@ -156,7 +157,8 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-xl bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 font-bold shadow-brutal border-2 border-foreground transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-xl"
+                variant="outline"
+                className="h-14 px-8 rounded-full border-2 border-foreground/10 bg-background/50 hover:bg-background hover:border-foreground/20 font-bold backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
               >
                 <a href="/Akib_Hasan_resume_frontend.pdf" download="Akib_Hasan_resume_frontend.pdf">
                   <Download className="w-5 h-5 mr-2" />
@@ -164,63 +166,80 @@ export function HeroSection() {
                 </a>
               </Button>
             </div>
+          </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4 justify-center mb-12">
-              <a
-                href={hero.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-card rounded-xl border-2 border-foreground shadow-brutal-sm transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal hover:border-primary group"
-                aria-label="GitHub Profile"
-              >
-                <Github className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </a>
-              <a
-                href={hero.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-card rounded-xl border-2 border-foreground shadow-brutal-sm transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal hover:border-primary group"
-                aria-label="LinkedIn Profile"
-              >
-                <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </a>
-              <a
-                href={`tel:${hero.phone}`}
-                className="p-3 bg-card rounded-xl border-2 border-foreground shadow-brutal-sm transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal hover:border-primary group"
-                aria-label="Phone Number"
-              >
-                <Phone className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
-              </a>
-            </div>
+          {/* Right Column: Visual Card */}
+          <div className="relative group perspective-1000 w-full">
+            {/* Decorative Blobs behind the card */}
+            <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
+            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
 
-            {/* Tech Stack Showcase */}
-            <div className="w-full max-w-3xl">
-              <p className="text-sm font-semibold text-muted-foreground mb-4 text-center">CORE TECH STACK</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {techStack.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="group relative px-4 py-2 bg-muted/50 rounded-lg border border-border hover:border-primary transition-all duration-200 hover:-translate-y-1"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="font-mono font-bold" style={{ color: tech.color }}>
-                        <tech.icon className="w-5 h-5" />
-                      </span>
-                      <span className="text-sm font-medium text-foreground">{tech.name}</span>
-                    </div>
-                  </div>
-                ))}
+            {/* The Glass Card */}
+            <div className="relative bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-zinc-200/50 dark:border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.005]">
+              {/* Card Header: Connect */}
+              <div className="mb-10">
+                <h3 className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-6 flex items-center gap-3">
+                  <span className="w-8 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
+                  Connect
+                  <span className="flex-1 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
+                </h3>
+                <div className="flex gap-4">
+                  {[
+                    { href: hero.github, icon: Github, label: "GitHub" },
+                    { href: hero.linkedin, icon: Linkedin, label: "LinkedIn" },
+                    { href: `tel:${hero.phone}`, icon: Phone, label: "Phone" }
+                  ].map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 h-24 flex flex-col items-center justify-center gap-3 bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/icon"
+                      aria-label={social.label}
+                    >
+                      <social.icon className="w-7 h-7 text-zinc-700 dark:text-zinc-200 group-hover/icon:text-primary transition-colors duration-300" />
+                      <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400">{social.label}</span>
+                    </a>
+                  ))}
+                </div>
               </div>
+
+              {/* Card Body: Tech Stack */}
+              <div>
+                <h3 className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-6 flex items-center gap-3">
+                  <span className="w-8 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
+                  Tech Arsenal
+                  <span className="flex-1 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
+                </h3>
+                <div className="grid grid-cols-4 gap-4">
+                  {techStack.map((tech) => (
+                    <div
+                      key={tech.name}
+                      className="aspect-square flex flex-col items-center justify-center p-3 rounded-2xl bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 cursor-help relative group/tech"
+                      title={tech.name}
+                    >
+                      <span className="text-3xl filter drop-shadow-sm" style={{ color: tech.color }}>
+                        <tech.icon />
+                      </span>
+                      <span className="absolute -bottom-8 bg-zinc-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/tech:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
+                        {tech.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom Decoration */}
+              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-80" />
             </div>
           </div>
         </div>
-      </Card>
+      </div>
 
       {/* Scroll Indicator */}
       <button
         onClick={scrollToAbout}
-        className="mt-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
       >
         <span className="text-sm font-medium">Scroll to explore</span>
         <ChevronDown className="w-6 h-6 animate-bounce" />
