@@ -51,27 +51,31 @@ export function AboutSection() {
           </div>
 
           {/* Right Stats Card */}
-          <Card className="p-8 rounded-2xl shadow-brutal border-2 border-foreground bg-card">
-            <div className="grid grid-cols-2 gap-6">
-              {about.stats.map((stat, index) => {
-                const Icon = statIcons[index]
-                return (
-                  <div
-                    key={index}
-                    className="p-6 bg-background rounded-xl border-2 border-border hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-brutal-sm group cursor-pointer"
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                        <Icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+          <div className="relative group perspective-1000 w-full max-w-lg mx-auto lg:mx-0">
+            {/* The Grid Card */}
+            <div className="relative bg-white/80 dark:bg-[#0F1115] border border-zinc-200 dark:border-white/10 rounded-[2rem] p-6 sm:p-8 shadow-2xl overflow-hidden backdrop-blur-sm">
+              <div className="grid grid-cols-2 gap-4">
+                {about.stats.map((stat, index) => {
+                  const Icon = statIcons[index]
+                  return (
+                    <div 
+                      key={index} 
+                      className="aspect-square bg-zinc-50 dark:bg-[#08090C] rounded-2xl p-6 flex flex-col justify-center items-start border border-zinc-200 dark:border-white/5 hover:border-blue-500/30 transition-colors group/stat"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mb-4 group-hover/stat:bg-blue-500/20 transition-colors">
+                        <Icon className="w-5 h-5 text-blue-500" />
                       </div>
+                      <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-1">{stat.value}</h3>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium">{stat.label}</p>
                     </div>
-                    <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
+              
+              {/* Outer Glow */}
+              <div className="absolute inset-0 border border-zinc-200 dark:border-white/5 rounded-[2rem] pointer-events-none" />
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>

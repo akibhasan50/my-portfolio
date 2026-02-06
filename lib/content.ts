@@ -13,7 +13,7 @@ export const portfolioContent = {
     tagline: "Clean Code. High Performance. User-Centric Design.",
     description:
       "Frontend Developer with 5+ years of experience in building high-performance, accessible, and scalable web applications. I specialize in crafting clean, intuitive UIs and optimizing systems for efficiency.",
-    location: "Jashore, Bangladesh",
+    location: "Available for work",
     email: "tonuakibhasan@gmail.com",
     github: "https://github.com/akibhasan50",
     linkedin: "https://www.linkedin.com/in/akib-hasan50/",
@@ -31,7 +31,7 @@ export const portfolioContent = {
     ],
     stats: [
       { value: "5+", label: "Years Experience" },
-      { value: "4+", label: "Web Apps Built" },
+      { value: "8+", label: "Production Apps Built" },
       { value: "80%+", label: "Test Coverage" },
       { value: "40%", label: "Load Time Reduced" },
     ],

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Github, Linkedin, Mail, MapPin, Moon, Sun, ChevronDown, Phone, Download } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, Moon, Sun, ChevronDown, Phone, Download, Target, Zap, Heart, Brain } from "lucide-react"
 import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiAngular, SiJest, SiNodedotjs, SiDocker, SiJavascript, SiRedux, SiGraphql, SiHtml5, SiCss3, SiGit, SiMongodb, SiPython, SiSass } from "react-icons/si"
 import { portfolioContent } from "@/lib/content"
 import { useThemeContext } from "@/components/theme-context"
@@ -113,10 +113,17 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column: Content */}
           <div className="flex flex-col items-start text-left space-y-8 animate-fade-in-up">
-            {/* Location Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-background/80 backdrop-blur-md rounded-full border border-border shadow-sm text-sm font-medium text-muted-foreground">
-              <MapPin className="w-4 h-4 mr-2 text-primary" />
-              {hero.location}
+            {/* Profile Image & Status Badge */}
+            <div className="flex flex-col gap-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900/5 dark:bg-white/5 backdrop-blur-md rounded-full border border-zinc-200/50 dark:border-white/10 shadow-sm transition-all hover:bg-zinc-900/10 dark:hover:bg-white/10">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span className="text-sm font-medium text-zinc-700 dark:text-zinc-200">
+                  {hero.location}
+                </span>
+              </div>
             </div>
 
             {/* Main Heading */}
@@ -169,21 +176,19 @@ export function HeroSection() {
           </div>
 
           {/* Right Column: Visual Card */}
-          <div className="relative group perspective-1000 w-full">
-            {/* Decorative Blobs behind the card */}
-            <div className="absolute -top-10 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
-            <div className="absolute -bottom-10 -left-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity duration-700" />
-
-            {/* The Glass Card */}
-            <div className="relative bg-white/80 dark:bg-zinc-900/40 backdrop-blur-2xl border border-zinc-200/50 dark:border-white/10 rounded-[2.5rem] p-8 md:p-10 shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-[1.005]">
+          <div className="relative group perspective-1000 w-full max-w-lg mx-auto lg:mx-0">
+            {/* The Card */}
+            <div className="relative bg-white/80 dark:bg-[#0F1115] border border-zinc-200 dark:border-white/5 rounded-[2rem] p-8 shadow-2xl overflow-hidden backdrop-blur-sm">
+              
               {/* Card Header: Connect */}
-              <div className="mb-10">
-                <h3 className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <span className="w-8 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
-                  Connect
-                  <span className="flex-1 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
-                </h3>
-                <div className="flex gap-4">
+              <div className="mb-8">
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="h-[1px] w-8 bg-zinc-200 dark:bg-zinc-800"></div>
+                   <h3 className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em]">Connect</h3>
+                   <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800"></div>
+                </div>
+                
+                <div className="grid grid-cols-3 gap-4">
                   {[
                     { href: hero.github, icon: Github, label: "GitHub" },
                     { href: hero.linkedin, icon: Linkedin, label: "LinkedIn" },
@@ -194,11 +199,11 @@ export function HeroSection() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 h-24 flex flex-col items-center justify-center gap-3 bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 group/icon"
+                      className="aspect-square flex flex-col items-center justify-center gap-3 bg-zinc-50 dark:bg-[#18181B] border border-zinc-200 dark:border-white/5 rounded-2xl hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-white/10 transition-all duration-300 hover:-translate-y-1 group/icon"
                       aria-label={social.label}
                     >
-                      <social.icon className="w-7 h-7 text-zinc-700 dark:text-zinc-200 group-hover/icon:text-primary transition-colors duration-300" />
-                      <span className="text-xs font-semibold text-zinc-600 dark:text-zinc-400">{social.label}</span>
+                      <social.icon className="w-6 h-6 text-zinc-400 dark:text-zinc-400 group-hover/icon:text-zinc-900 dark:group-hover/icon:text-white transition-colors duration-300" />
+                      <span className="text-[10px] font-medium text-zinc-500 dark:text-zinc-500 group-hover/icon:text-zinc-700 dark:group-hover/icon:text-zinc-300">{social.label}</span>
                     </a>
                   ))}
                 </div>
@@ -206,23 +211,21 @@ export function HeroSection() {
 
               {/* Card Body: Tech Stack */}
               <div>
-                <h3 className="text-xs font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-6 flex items-center gap-3">
-                  <span className="w-8 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
-                  Tech Arsenal
-                  <span className="flex-1 h-[1px] bg-zinc-300 dark:bg-zinc-700"></span>
-                </h3>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="h-[1px] w-8 bg-zinc-200 dark:bg-zinc-800"></div>
+                   <h3 className="text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-[0.2em]">Tech Arsenal</h3>
+                   <div className="flex-1 h-[1px] bg-zinc-200 dark:bg-zinc-800"></div>
+                </div>
+
+                <div className="grid grid-cols-4 gap-3">
                   {techStack.map((tech) => (
                     <div
                       key={tech.name}
-                      className="aspect-square flex flex-col items-center justify-center p-3 rounded-2xl bg-white dark:bg-white/5 border border-zinc-100 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 cursor-help relative group/tech"
+                      className="aspect-square flex flex-col items-center justify-center p-2 rounded-2xl bg-zinc-50 dark:bg-[#18181B] border border-zinc-200 dark:border-white/5 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:border-zinc-300 dark:hover:border-white/10 transition-all duration-300 hover:scale-105 cursor-help relative group/tech"
                       title={tech.name}
                     >
-                      <span className="text-3xl filter drop-shadow-sm" style={{ color: tech.color }}>
+                      <span className="text-2xl transition-transform duration-300 group-hover/tech:scale-110" style={{ color: tech.color }}>
                         <tech.icon />
-                      </span>
-                      <span className="absolute -bottom-8 bg-zinc-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover/tech:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-20">
-                        {tech.name}
                       </span>
                     </div>
                   ))}
@@ -230,7 +233,7 @@ export function HeroSection() {
               </div>
 
               {/* Bottom Decoration */}
-              <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-80" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-80" />
             </div>
           </div>
         </div>
