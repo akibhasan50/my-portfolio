@@ -2,9 +2,9 @@ import {
   SiJavascript, SiTypescript, SiReact, SiRedux, SiNextdotjs, SiAngular, SiLit, 
   SiHtml5, SiCss3, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiJquery, 
   SiJest, SiCypress, SiVitest, SiDocker, SiGooglecloud, SiGithub, SiGitlab,
-  SiReactquery, SiShadcnui
+  SiReactquery, SiShadcnui, SiSocketdotio, SiOpenai, SiExpo
 } from "react-icons/si";
-import { TestTube } from "lucide-react";
+import { TestTube, Bot } from "lucide-react";
 
 export const portfolioContent = {
   hero: {
@@ -49,7 +49,7 @@ export const portfolioContent = {
       },
       {
         title: "Enterprise Experience",
-        description: "Google-backed CCaaS platforms",
+        description: "CCaaS & Omnichannel B2B platforms",
       },
       {
         title: "Quality Focused",
@@ -81,6 +81,9 @@ export const portfolioContent = {
           { name: "AngularJS", expertise: "Advanced", description: "Enterprise applications", icon: SiAngular, color: "#DD0031" },
           { name: "Lit.js", expertise: "Proficient", description: "Web components", icon: SiLit, color: "#324FFF" },
           { name: "Zustand", expertise: "Advanced", description: "Lightweight state", icon: SiReact, color: "#443E38" },
+          { name: "Socket.IO", expertise: "Advanced", description: "Realtime bidirectional events", icon: SiSocketdotio, color: "#010101" },
+          { name: "React Native", expertise: "Advanced", description: "Cross-platform mobile apps", icon: SiReact, color: "#61DAFB" },
+          { name: "Expo", expertise: "Advanced", description: "Mobile client development", icon: SiExpo, color: "#000020" },
         ],
       },
       {
@@ -128,6 +131,17 @@ export const portfolioContent = {
           { name: "GitLab", expertise: "Advanced", description: "DevOps platform", icon: SiGitlab, color: "#FC6D26" },
         ],
       },
+      {
+        name: "AI & Modern Tools",
+        icon: "Bot",
+        description: "AI-assisted workflows & productivity",
+        skills: [
+          { name: "ChatGPT", expertise: "Expert", description: "Prompt engineering & AI workflows", icon: SiOpenai, color: "#10A37F" },
+          { name: "Codex / OpenCode", expertise: "Expert", description: "AI code generation & assistance", icon: SiOpenai, color: "#10A37F" },
+          { name: "Prompt Engineering", expertise: "Expert", description: "Structured prompts & LLM optimization", icon: SiOpenai, color: "#10A37F" },
+          { name: "AI Code Review", expertise: "Advanced", description: "Validation, refactoring & code QA", icon: SiOpenai, color: "#10A37F" },
+        ],
+      },
     ],
   },
   projects: {
@@ -138,44 +152,55 @@ export const portfolioContent = {
     list: [
       {
         id: 1,
-        title: "UJET Portal",
+        title: "Zurvis / OSaaS",
         description:
-          "A Google-backed CCaaS platform. Contributed to the frontend of the agent application, focusing on Chat Adapter, Call Adapter, Email Adapter, Queue Settings, and user roles. Implemented real-time communication features, optimized performance, and maintained 80%+ test coverage.",
+          "Omnichannel customer-support platform and mobile client with inbox, CRM, WhatsApp workflows, broadcasts, realtime messaging, billing/admin, RBAC, push notifications, and voice calls.",
         image: "",
-        tech: ["React", "Angular", "TypeScript", "Lit.js", "Jest", "Cypress", "CI/CD"],
+        tech: ["React", "Next.js", "TypeScript", "React Native", "Expo", "Tailwind CSS", "shadcn/ui", "Socket.IO", "TanStack Query", "Zustand", "FCM"],
         github: "",
         live: "",
         featured: true,
       },
       {
         id: 2,
-        title: "LabelHub",
+        title: "UJET Portal",
         description:
-          "A web-based Bangla text annotation tool using React, featuring client-side caching, session management, and role-based access control. Streamlined the annotation and categorization of Bangla text.",
+          "CCaaS agent/admin frontend spanning chat, calls, email, queues, roles, and realtime communication, with performance improvements and automated testing.",
         image: "",
-        tech: ["React", "Shadcn", "TypeScript", "Session Management"],
+        tech: ["JavaScript", "AngularJS", "Lit.js", "RxJS", "Redux-Observable", "Jest", "Karma", "Cypress", "CI/CD"],
         github: "",
         live: "",
         featured: true,
       },
       {
         id: 3,
-        title: "WeLearn",
+        title: "LabelHub",
         description:
-          "An e-learning platform facilitating cost-effective online training for data entry operators. Replaced 90% of physical training and reduced costs by 60%.",
+          "React-based Bangla text annotation platform with client-side caching, session management, and RBAC.",
         image: "",
-        tech: ["React", "Node.js", "JavaScript", "PHP", "MySQL"],
+        tech: ["React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Caching", "RBAC"],
         github: "",
         live: "",
         featured: true,
       },
       {
         id: 4,
+        title: "WeLearn",
+        description:
+          "E-learning platform that digitized training workflows and reduced reliance on in-person training, replacing ~90% of physical training and cutting training costs by ~60%.",
+        image: "",
+        tech: ["PHP", "Bootstrap", "MySQL", "jQuery", "LMS"],
+        github: "",
+        live: "",
+        featured: true,
+      },
+      {
+        id: 5,
         title: "Enterprise Web Apps",
         description:
-          "Built 4+ web applications with React and Next.js from the ground up. Spearheaded application rewrites resulting in 40% decrease in load time and improved accessibility.",
+          "Built 4+ production web applications with React, Next.js, TypeScript, and FastAPI-backed REST APIs, scaled to thousands of users with 40% load time reduction.",
         image: "",
-        tech: ["React", "Next.js", "TypeScript", "Performance"],
+        tech: ["React", "Next.js", "TypeScript", "FastAPI", "Tailwind CSS"],
         github: "",
         live: "",
         featured: false,
@@ -187,53 +212,72 @@ export const portfolioContent = {
     subtitle: "Building the future, one project at a time",
     list: [
       {
+        company: "Probfly",
+        logo: "",
+        position: "Software Engineer (Frontend)",
+        duration: "Mar 2026 – Present",
+        location: "Dhaka, Bangladesh (On-site)",
+        companyDescription: "Multi-tenant B2B omnichannel customer support platform and companion mobile app suite",
+        description:
+          "Build and maintain a multi-tenant B2B omnichannel support platform using React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, TanStack Query, Zustand, and Socket.IO.",
+        highlights: [
+          "Developed reusable, responsive UI components and flows for authentication, workspace management, inbox, CRM/contacts, templates, broadcasts, billing, and admin.",
+          "Integrated REST APIs and realtime Socket.IO events to power live conversations, assignments, read/unread state, search, and notifications.",
+          "Built WhatsApp workflows, including Template Studio (variable and media handling), 24-hour template-only conversation mode, and broadcast insights.",
+          "Developed Zurvis, the companion React Native/Expo mobile app, covering inbox, contacts, realtime updates, media/templates, workspace access, and call experiences.",
+          "Implemented mobile push notifications with FCM HTTP v1, device registration, BullMQ-based delivery, user preferences, deduplication, deep links, and foreground/background sync.",
+          "Translated Figma designs into accessible, cross-browser interfaces; collaborated with backend, QA, UI/UX, and product teams and participated in code reviews.",
+        ],
+        tech: ["React", "Next.js", "TypeScript", "React Native", "Expo", "Tailwind CSS", "shadcn/ui", "TanStack Query", "Zustand", "Socket.IO", "FCM"],
+      },
+      {
         company: "UJET.cx",
         logo: "/logos/ujet.png",
-        position: "Software Engineer (Front-End)",
-        duration: "Jun 2024 - Present",
+        position: "Software Engineer (Frontend)",
+        duration: "Jun 2024 – Feb 2026",
         location: "San Francisco, CA (Remote)",
-        companyDescription: "Google-backed, cloud-native CCaaS platform trusted by T-Mobile,Keybank,Elementor and Bell Canada",
+        companyDescription: "Google-backed, cloud-native CCaaS platform trusted by T-Mobile, KeyBank, Elementor, and Bell Canada",
         description:
-          "Enhanced UJET Portal, an AI-driven cloud-native platform for contact centers, by collaborating with global engineering teams to deliver scalable CCaaS solutions.",
+          "Developed frontend features for a Google-backed, cloud-native CCaaS platform in collaboration with international engineering teams.",
         highlights: [
-          "Maintained 80%+ unit test coverage (Jest, Karma) for critical chat/call adapter modules",
-          "Developed mission-critical UI components from Figma designs with high performance",
-          "Enforced code consistency by reviewing PRs and upholding lint standards",
-          "Followed full SDLC including CI/CD pipelines, testing, and release cycles",
+          "Built and optimized production UI for Chat, Call, and Email Adapters, Queue Settings, and role-based agent/admin experiences using JavaScript, AngularJS/Lit, RxJS, and Redux-Observable.",
+          "Maintained 80%+ unit test coverage on critical modules with Jest and Karma; contributed to Cypress E2E tests.",
+          "Implemented responsive, reusable features from Figma specifications and resolved frontend bugs and performance issues across agent and admin workflows.",
+          "Participated in code reviews, linting, and CI/CD release workflows for internal and OEM environments.",
         ],
-        tech: ["React", "Angular", "TypeScript", "Lit.js", "Jest", "Cypress", "CI/CD"],
+        tech: ["JavaScript", "AngularJS", "Lit.js", "RxJS", "Redux-Observable", "Jest", "Karma", "Cypress", "CI/CD"],
       },
       {
         company: "GigaTech Ltd.",
         logo: "/logos/gigatech.png",
-        position: "Front End Developer",
-        duration: "Apr 2022 - May 2024",
+        position: "Frontend Developer",
+        duration: "Apr 2022 – May 2024",
         location: "Dhaka, Bangladesh",
         companyDescription: "BEXIMCO subsidiary offering AI-powered solutions like eKYC, OCR, and Bangla NLP",
         description:
-          "Built 4+ web applications with React and Next.js from the ground up as Front End Developer.",
+          "Built 4+ production web applications with React, Next.js, TypeScript, and FastAPI-backed REST APIs, used by thousands of users.",
         highlights: [
-          "Collaborated with UI/UX and API teams to build apps scaled to 1000s of users",
-          "Spearheaded web application rewrites resulting in 40% decrease in load time",
-          "Improved accessibility experience for users across all applications",
+          "Built 4+ production web applications with React, Next.js, TypeScript, and FastAPI-backed REST APIs, used by thousands of users.",
+          "Developed reusable interfaces, authentication/RBAC flows, and data-driven screens with responsive layouts.",
+          "Contributed to application rewrites that reduced load time by approximately 40%; collaborated closely with UI/UX and API teams.",
         ],
-        tech: ["React", "Next.js", "TypeScript", "Tailwind"],
+        tech: ["React", "Next.js", "TypeScript", "FastAPI", "Tailwind CSS", "REST APIs"],
       },
       {
         company: "Golden Harvest Infotech Ltd.",
         logo: "/logos/ghit.png",
         position: "Assistant Programmer",
-        duration: "Dec 2020 - Mar 2022",
+        duration: "Dec 2020 – Mar 2022",
         location: "Dhaka, Bangladesh",
-        companyDescription: "Software company specializing in enterprise solutions",
+        companyDescription: "Software company specializing in enterprise solutions and data processing",
         description:
-          "Developed fullstack web applications which processed, analyzed and rendered data visually.",
+          "Developed full-stack web applications with PHP, Bootstrap, MySQL, and jQuery, including data processing and visualization workflows.",
         highlights: [
-          "Implemented LMS that replaced 90% of physical training and reduced costs by 60%",
-          "Built data visualization tools for processing and analyzing business data",
-          "Ensured accuracy through meticulous build, implementation, and debugging",
+          "Delivered an LMS that replaced ~90% of physical training and cut training costs by ~60%.",
+          "Owned the full cycle of planning, implementation, testing, debugging, and delivery for web application features.",
+          "Developed full-stack web applications with PHP, Bootstrap, MySQL, and jQuery, including data processing and visualization workflows.",
         ],
-        tech: ["React", "Node.js", "JavaScript", "Full-stack"],
+        tech: ["PHP", "Bootstrap", "MySQL", "jQuery", "Full-Stack"],
       },
     ],
   },

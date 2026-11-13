@@ -27,7 +27,7 @@ export function ProjectsSection() {
         </div>
 
         {/* Featured Projects */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
           {featuredProjects.map((project, index) => (
             <Card
               key={project.id}
@@ -46,7 +46,7 @@ export function ProjectsSection() {
                 <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4 min-h-[4rem]">
                   {project.description}
                 </p>
               </div>
