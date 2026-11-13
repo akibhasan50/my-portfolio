@@ -38,6 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} dark`}>
       <body className="font-sans antialiased">
+        {/* Apply stored theme before first paint to avoid dark/light flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");document.documentElement.classList.toggle("dark",t!=="light")}catch(e){document.documentElement.classList.add("dark")}`,
+          }}
+        />
         <ThemeProvider>
           <BackgroundShapes />
           {children}

@@ -11,7 +11,7 @@ export function ExperienceSection() {
   const { experience } = portfolioContent
 
   return (
-    <section className="py-24 px-4 bg-background relative overflow-hidden">
+    <section id="experience" className="py-24 px-4 bg-background relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-grid opacity-30" />
 

@@ -13,33 +13,41 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
+function readStoredTheme(): Theme {
+  try {
+    return localStorage.getItem("theme") === "light" ? "light" : "dark"
+  } catch {
+    return "dark"
+  }
+}
+
+function applyTheme(theme: Theme) {
+  document.documentElement.classList.toggle("dark", theme === "dark")
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("dark")
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    const stored = readStoredTheme()
+    setTheme(stored)
+    applyTheme(stored)
     setMounted(true)
-    // Get theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem("theme") as Theme
-    if (savedTheme) {
-      setTheme(savedTheme)
-      document.documentElement.classList.toggle("dark", savedTheme === "dark")
-    } else {
-      setTheme("dark")
-      document.documentElement.classList.add("dark")
-    }
   }, [])
 
   useEffect(() => {
-    if (mounted) {
-      document.documentElement.classList.toggle("dark", theme === "dark")
+    if (!mounted) return
+    applyTheme(theme)
+    try {
+      localStorage.setItem("theme", theme)
+    } catch {
+      // storage unavailable (e.g. private mode) — theme still applies for this session
     }
   }, [theme, mounted])
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark"
-    setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"))
   }
 
   return (

@@ -3,13 +3,13 @@
 import { Card } from "@/components/ui/card"
 import { portfolioContent } from "@/lib/content"
 import { useState } from "react"
-import { Code, Palette, Server } from "lucide-react"
+import { Code, Palette, Server, TestTube, Cloud, Bot } from "lucide-react"
 
 export function SkillsSection() {
   const { skills } = portfolioContent
   const [activeCategory, setActiveCategory] = useState(0)
 
-  const categoryIcons = [Code, Palette, Server]
+  const categoryIcons = [Code, Palette, Server, TestTube, Cloud, Bot]
 
   const getExpertiseColor = (expertise: string) => {
     switch (expertise) {
